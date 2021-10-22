@@ -1,0 +1,34 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner s = new Scanner(System.in);
+		int T = s.nextInt();
+		for(int i = 0;i<T;i++){
+		    int N = s.nextInt();
+		    int D = s.nextInt();
+		    int a[] = new int[N];
+		    int arr[] = new int[N];
+		   for(int j = 0;j<N;j++){
+		       a[j] = s.nextInt();
+		   }
+		   int pos = 0;
+		   for(int k = D;k<N;k++){
+		       arr[pos++] = a[k];
+		   }
+		   for(int k = 0;k<D;k++){
+		       arr[pos++] = a[k];
+		   }
+		   
+		   for(int k = 0;k<N;k++){
+		       System.out.print(arr[k]+" ");
+		   }
+		    System.out.println();
+		}
+	}
+}

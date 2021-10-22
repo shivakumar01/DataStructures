@@ -1,0 +1,56 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		int[] arr;
+		Scanner s = new Scanner(System.in);
+		int T = s.nextInt();
+		for(int i = 0;i<T;i++){
+		    int N = s.nextInt();
+		    arr = new int[N];
+		    for(int j = 0;j<N;j++){
+		        arr[j] = s.nextInt();
+		    }
+		    int item = s.nextInt();
+		    int index = -1;
+		    int pos;
+		    int start = arr[0];
+		    int end = arr[N-1];
+		    int distanceS = Math.abs(item-start);
+		    int distanceE = Math.abs(item-end);
+		    
+		  //  System.out.println(distanceS+" "+distanceE+" "+item);
+		    
+		    if(distanceS < distanceE){
+		        pos = 0;
+		       
+		        while((pos == 0) || (pos != N && arr[pos] >= arr[pos-1])){
+		            if(arr[pos] == item){
+		                
+		                index = pos;
+		            }
+		            pos++;
+		        }
+		    }
+		    else{
+		        pos = (N-1);
+		        while(( pos == (N-1)) || (pos>=0 && arr[pos] <= arr[pos+1])){
+		            if(arr[pos] == item){
+		              //  System.out.println(pos);
+		               index = pos;
+		            }
+		            pos--;
+		        }
+		    }
+		    
+		    System.out.println(index);
+		    
+		}
+		
+	}
+}

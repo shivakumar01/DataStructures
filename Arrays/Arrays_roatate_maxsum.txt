@@ -1,0 +1,43 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+        int[] arr = {10, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        
+        int pos = findMaxPos(arr);
+        rotate(arr,pos);
+        int sum = 0;
+        for(int j = 0;j<arr.length;j++){
+            sum+=(j*arr[j]);            
+        }
+        
+        System.out.println(sum);
+        
+	}
+	
+    static int	findMaxPos(int[] arr){
+	    int max = arr[0],pos = 0;
+	        for(int i =0;i<arr.length;i++){
+	            if(arr[i]>max){
+	                max = arr[i];
+	                pos = i;
+	            }
+	        }
+	   return pos;
+	}
+	
+	static void rotate(int[] arr,int pos){
+	    if(pos!=(arr.length-1)){
+	        for(int i = 0;i<=pos;i++){
+	            int temp = arr[0];
+	                for(int j = 0;j<arr.length-1;j++){
+	                       arr[j] = arr[j+1];
+	                }
+	                arr[arr.length-1] = temp;
+	        }
+	    }
+	}
+	
+}

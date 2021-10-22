@@ -1,0 +1,64 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f9e809ac3d1, pid=13630, tid=13636
+#
+# JRE version: OpenJDK Runtime Environment (11.0.11+9) (build 11.0.11+9-Ubuntu-0ubuntu2.18.04)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.11+9-Ubuntu-0ubuntu2.18.04, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x23d1]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/shiva/Documents/CSPREP/DataStructures/DataStruct/core.13630)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:36521 -javaagent:/home/shiva/.eclipse/360744286_linux_gtk_x86_64/configuration/org.eclipse.osgi/222/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 --module-path=/home/shiva/Documents/CSPREP/DataStructures/DataStruct/bin -Djdk.module.main=dataStruct dataStruct/LinearStructs.Main
+
+Host: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz, 4 cores, 3G, Ubuntu 18.04.4 LTS
+Time: Fri Jul  2 18:54:59 2021 IST elapsed time: 16931.631632 seconds (0d 4h 42m 11s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f9e7c018800):  JavaThread "main" [_thread_in_vm, id=13636, stack(0x00007f9e83cb2000,0x00007f9e83db3000)]
+
+Stack: [0x00007f9e83cb2000,0x00007f9e83db3000],  sp=0x00007f9e83db00e0,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x23d1]
+C  [libjimage.so+0x304a]
+C  [libjimage.so+0x3515]  JIMAGE_FindResource+0xd5
+V  [libjvm.so+0x596f2f]
+V  [libjvm.so+0x5991cb]
+V  [libjvm.so+0xd845ac]
+V  [libjvm.so+0xd831d2]
+V  [libjvm.so+0xd856e6]
+V  [libjvm.so+0x6403ad]
+V  [libjvm.so+0x824a4a]
+j  java.util.Scanner.throwFor()V+26 java.base@11.0.11
+j  java.util.Scanner.next(Ljava/util/regex/Pattern;)Ljava/lang/String;+80 java.base@11.0.11
+j  java.util.Scanner.nextInt(I)I+56 java.base@11.0.11
+j  java.util.Scanner.nextInt()I+5 java.base@11.0.11
+j  LinearStructs.Main.main([Ljava/lang/String;)V+28 dataStruct
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x82db91]
+V  [libjvm.so+0x8a25bc]
+V  [libjvm.so+0x8a4658]
+C  [libjli.so+0x4738]
+C  [libjli.so+0x87ed]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.util.Scanner.throwFor()V+26 java.base@11.0.11
+j  java.util.Scanner.next(Ljava/util/regex/Pattern;)Ljava/lang/String;+80 java.base@11.0.11
+j  java.util.Scanner.nextInt(I)I+56 java.base@11.0.11
+j  java.util.Scanner.nextInt()I+5 java.base@11.0.11
+j  LinearStructs.Main.main([Ljava/lang/String;)V+28 dataStruct
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f9e7389004c
+
+Register to memory mapping:
+
+RAX=

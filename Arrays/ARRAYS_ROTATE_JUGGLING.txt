@@ -1,0 +1,46 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+    
+   static int GCD(int a, int b){
+        if(a == 0) return b;
+        
+        return GCD(b%a,a);
+    
+    }
+    
+	public static void main (String[] args) {
+		//code
+		int[] arr = {1,2,3,4};
+		int N = 4; int D = 2;
+		int GCD = GCD(N,D);
+		for(int i = 0;i<D;i++){
+		   int temp = arr[i];
+		   int pos = i;
+		   if(GCD == 1){
+		       temp = arr[0];
+		       pos = 0;
+		   } 
+		  //  System.out.println(N-GCD+i);
+		    for(int j = pos;j<(N-GCD);j+=GCD){
+		        arr[j] = arr[j+GCD];
+		    }
+		
+		   
+		   if(GCD == 1){
+		       arr[N-1] = temp;
+		   }else{
+		       arr[N-GCD+i] = temp;
+		   }
+		}
+		
+		for(int k = 0;k<N;k++){
+		    System.out.print(arr[k]+" ");
+		}
+		
+	}
+}
